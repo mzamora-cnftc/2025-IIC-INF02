@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="mauri"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-05-22 06:48:53 "/>
+        <attribute name="created" value="bWF1cmk7QkxVRVBDOzIwMjUtMDUtMjI7IjA2OjI1OjQyICI7MjE3Nw=="/>
+        <attribute name="edited" value="bWF1cmk7QkxVRVBDOzIwMjUtMDUtMjI7IjA2OjQ4OjUzICI7MTsyMjky"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="diametro, radio, area" type="Real" array="False" size=""/>
+            <output expression="&quot;Por favor digite el diametro: &quot;" newline="True"/>
+            <input variable="diametro"/>
+            <assign variable="radio" expression="diametro / 2"/>
+            <assign variable="area" expression="radio * radio * 3.141516"/>
+            <output expression="&quot;Area: &quot; &amp; area" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
