@@ -4,14 +4,18 @@ import utilitarios.Utils;
 
 public class Ejemplo01 {
     public static void main(String[] args) {
+        double diametro, radio, area;
+
         Utils.limpiarConsola();
-        // Este es un comentario
-        System.out.println("Mi primer código en Java");
-        Utils.establecerColorRojo();
-        System.out.println("y en color rojo");
-        Utils.establecerColorAzul();
-        System.out.println("también azulado");
-        Utils.reiniciarColores();
+
+        diametro = Utils.leerDoble("Por favor digite el diametro: ");
+
+        radio = diametro / 2;
+
+        area = radio * radio * 3.141516;
+
+        System.out.println("Area: " + area);
+
     }
 
 }
