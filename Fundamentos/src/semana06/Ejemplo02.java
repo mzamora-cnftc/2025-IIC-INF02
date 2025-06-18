@@ -41,6 +41,7 @@ public class Ejemplo02 {
             System.out.printf("%-15s: %5.2f\n", "Pollos", (100d * nPollos / personas));
             System.out.printf("%-15s: %5.2f\n", "Pizzas", (100d * nPizzas / personas));
             System.out.printf("%-15s: %5.2f\n", "Hamburguesas", (100d * nHamburguesas / personas));
+ 
         }
     }
 }
