@@ -27,5 +27,6 @@ public class Ejemplo01 {
         promedio = total / limite;
 
         System.out.println("Promedio: " + promedio);
+        System.out.printf("Promedio es %.2f, dado que el total es %.2f y la cantidad de datos es %d\n",promedio, total, limite);
     }
 }
