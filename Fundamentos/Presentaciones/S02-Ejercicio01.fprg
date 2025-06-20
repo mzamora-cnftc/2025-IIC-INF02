@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="mauri"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-05-27 06:20:17 "/>
+        <attribute name="created" value="bWF1cmk7QkxVRVBDOzIwMjUtMDUtMjc7IjA2OjEwOjQ4ICI7MjE4Mg=="/>
+        <attribute name="edited" value="bWF1cmk7QkxVRVBDOzIwMjUtMDUtMjc7IjA2OjIwOjE3ICI7MjsyMjg4"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="precio, montoImpuesto, PORCENTAJEIMPUESTO, precioFinal" type="Real" array="False" size=""/>
+            <declare name="nombreProducto" type="String" array="False" size=""/>
+            <comment text="Constantes"/>
+            <assign variable="PORCENTAJEIMPUESTO" expression="0.13"/>
+            <comment text="Entradas"/>
+            <output expression="&quot;Digite el nombre producto: &quot;" newline="True"/>
+            <input variable="nombreProducto"/>
+            <output expression="&quot;Digite el precio sin impuestos: &quot;" newline="True"/>
+            <input variable="precio"/>
+            <comment text="Proceso"/>
+            <assign variable="montoImpuesto" expression="precio * PORCENTAJEIMPUESTO"/>
+            <assign variable="precioFinal" expression="precio + montoImpuesto"/>
+            <comment text="Salidas"/>
+            <output expression="nombreProducto &amp; &quot; &quot; &amp; precioFinal" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

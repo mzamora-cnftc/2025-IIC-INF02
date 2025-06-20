@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="mauri"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-06-10 08:29:21 "/>
+        <attribute name="created" value="bWF1cmk7QkxVRVBDOzIwMjUtMDYtMTA7IjA4OjE2OjI3ICI7MjE4MA=="/>
+        <attribute name="edited" value="bWF1cmk7QkxVRVBDOzIwMjUtMDYtMTA7IjA4OjI5OjIxICI7MjsyMjg3"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="diaH, diaM, mesH, mesM, a&#241;oH, a&#241;oM, ultimoDiaMes" type="Integer" array="False" size=""/>
+            <output expression="&quot;Digite el d&#237;a, mes y a&#241;o de hoy:&quot;" newline="True"/>
+            <input variable="diaH"/>
+            <input variable="mesH"/>
+            <input variable="a&#241;oH"/>
+            <if expression="mesH&gt;=1 &amp;&amp; mesH &lt;= 12">
+                <then>
+                    <if expression="mesH == 1 || mesH == 3 || mesH == 5 || mesH == 7 || mesH == 8 || mesH == 10 || mesH == 12">
+                        <then>
+                            <assign variable="ultimoDiaMes" expression="31"/>
+                        </then>
+                        <else>
+                            <if expression="mesH == 2">
+                                <then>
+                                    <assign variable="ultimoDiaMes" expression="28"/>
+                                </then>
+                                <else>
+                                    <assign variable="ultimoDiaMes" expression="30"/>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                    <if expression="diaH &gt;= 1 &amp;&amp; diaH &lt;= ultimoDiaMes">
+                        <then>
+                            <if expression="diaH == ultimoDiaMes">
+                                <then>
+                                    <assign variable="diaM" expression="1"/>
+                                    <if expression="mesH == 12">
+                                        <then>
+                                            <assign variable="mesM" expression="1"/>
+                                            <assign variable="a&#241;oM" expression="a&#241;oH + 1"/>
+                                        </then>
+                                        <else>
+                                            <assign variable="mesM" expression="mesH + 1"/>
+                                            <assign variable="a&#241;oM" expression="a&#241;oH"/>
+                                        </else>
+                                    </if>
+                                </then>
+                                <else>
+                                    <assign variable="diaM" expression="diaH + 1"/>
+                                    <assign variable="mesM" expression="mesH"/>
+                                    <assign variable="a&#241;oM" expression="a&#241;oH"/>
+                                </else>
+                            </if>
+                            <output expression="&quot;Ma&#241;ana es: &quot; &amp; diaM &amp; &quot;/&quot; &amp; mesM &amp; &quot;/&quot; &amp; a&#241;oM" newline="True"/>
+                        </then>
+                        <else>
+                            <output expression="&quot;El d&#237;a no corresponde a un rango v&#225;lido&quot;" newline="True"/>
+                        </else>
+                    </if>
+                </then>
+                <else>
+                    <output expression="&quot;El mes no corresponde a un rango v&#225;lido&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="mauri"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-06-19 06:41:43 "/>
+        <attribute name="created" value="bWF1cmk7QkxVRVBDOzIwMjUtMDYtMTk7IjA2OjM3OjQyICI7MjE4Nw=="/>
+        <attribute name="edited" value="bWF1cmk7QkxVRVBDOzIwMjUtMDYtMTk7IjA2OjQxOjQzICI7MTsyMjkx"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="i, n, factorial" type="Integer" array="False" size=""/>
+            <assign variable="factorial" expression="1"/>
+            <output expression="&quot;Digite el n!: &quot;" newline="True"/>
+            <input variable="n"/>
+            <for variable="i" start="1" end="n" direction="inc" step="1">
+                <assign variable="factorial" expression="factorial * i"/>
+            </for>
+            <output expression="factorial" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

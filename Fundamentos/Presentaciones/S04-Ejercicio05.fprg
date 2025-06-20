@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="mauri"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-06-10 07:58:25 "/>
+        <attribute name="created" value="bWF1cmk7QkxVRVBDOzIwMjUtMDYtMTA7IjA3OjUyOjExICI7MjE3Mg=="/>
+        <attribute name="edited" value="bWF1cmk7QkxVRVBDOzIwMjUtMDYtMTA7IjA3OjU4OjI1ICI7MTsyMjkx"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="edad" type="Real" array="False" size=""/>
+            <output expression="&quot;Digite la edad de la piedra: &quot;" newline="True"/>
+            <input variable="edad"/>
+            <if expression="edad &lt;= 65.5">
+                <then>
+                    <output expression="&quot;Cenozoica&quot;" newline="True"/>
+                </then>
+                <else>
+                    <if expression="edad &lt; 251">
+                        <then>
+                            <output expression="&quot;Mesozoica&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <if expression="edad &lt; 542">
+                                <then>
+                                    <output expression="&quot;Paleozoica&quot;" newline="True"/>
+                                </then>
+                                <else>
+                                    <output expression="&quot;Pre-paleozoica&quot;" newline="True"/>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

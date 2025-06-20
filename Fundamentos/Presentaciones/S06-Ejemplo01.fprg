@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="mauri"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-06-17 09:19:25 "/>
+        <attribute name="created" value="bWF1cmk7QkxVRVBDOzIwMjUtMDYtMTc7IjA3OjE2OjM0ICI7MjE4NA=="/>
+        <attribute name="edited" value="bWF1cmk7QkxVRVBDOzIwMjUtMDYtMTc7IjA5OjE5OjI1ICI7MjsyMjk4"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="contador, limite" type="Integer" array="False" size=""/>
+            <declare name="total, valor, promedio" type="Real" array="False" size=""/>
+            <comment text="inicializar"/>
+            <assign variable="contador" expression="0"/>
+            <assign variable="total" expression="0"/>
+            <output expression="&quot;Digite la cantidad de datos a procesar: &quot;" newline="True"/>
+            <input variable="limite"/>
+            <comment text="OJO: En Java y cia. se inicia en 0 y se llega hasta justa antes del valor final"/>
+            <for variable="contador" start="1" end="limite" direction="inc" step="1">
+                <output expression="&quot;Digite el valor a procesar: &quot;" newline="True"/>
+                <input variable="valor"/>
+                <assign variable="total" expression="total + valor"/>
+            </for>
+            <assign variable="promedio" expression="total / limite"/>
+            <output expression="&quot;Promedio es: &quot; &amp; promedio" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

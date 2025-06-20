@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="mauri"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-06-05 08:56:17 "/>
+        <attribute name="created" value="bWF1cmk7QkxVRVBDOzIwMjUtMDYtMDU7IjA2OjUxOjE4ICI7MjE4MQ=="/>
+        <attribute name="edited" value="bWF1cmk7QkxVRVBDOzIwMjUtMDYtMDU7IjA4OjU2OjE3ICI7MTsyMjk1"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="estaEnPromo, esParaMayores" type="Boolean" array="False" size=""/>
+            <declare name="dia" type="Integer" array="False" size=""/>
+            <declare name="estrellas" type="Real" array="False" size=""/>
+            <output expression="&quot;D&#237;a: &quot;" newline="True"/>
+            <input variable="dia"/>
+            <output expression="&quot;Promo: &quot;" newline="True"/>
+            <input variable="estaEnPromo"/>
+            <output expression="&quot;Estrellas: &quot;" newline="True"/>
+            <input variable="estrellas"/>
+            <output expression="&quot;&#191;Es para mayores?&quot;" newline="True"/>
+            <input variable="esParaMayores"/>
+            <if expression="(   dia &gt; 15 ||  estaEnPromo   ) &amp;&amp; ( estrellas &gt; 4  || !esParaMayores     )">
+                <then>
+                    <output expression="&quot;Vamos al cine!&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;Una noche de Netflix&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

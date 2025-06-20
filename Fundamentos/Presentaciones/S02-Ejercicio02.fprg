@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="mauri"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-05-27 06:49:44 "/>
+        <attribute name="created" value="bWF1cmk7QkxVRVBDOzIwMjUtMDUtMjc7IjA2OjQwOjQ3ICI7MjE4NA=="/>
+        <attribute name="edited" value="bWF1cmk7QkxVRVBDOzIwMjUtMDUtMjc7IjA2OjQ5OjQ0ICI7MjsyMjk5"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="PRECIOUNITARIO, COSTOUNITARIO" type="Real" array="False" size=""/>
+            <declare name="utilidadUnitaria, utilidadTotal, utilidadHugo, utilidadPaco, utilidadLuis" type="Real" array="False" size=""/>
+            <declare name="cantidadUnidades" type="Integer" array="False" size=""/>
+            <comment text="Constantes"/>
+            <assign variable="PRECIOUNITARIO" expression="10"/>
+            <assign variable="COSTOUNITARIO" expression="5.5"/>
+            <comment text="inputs"/>
+            <output expression="&quot;Digite la cantidad de limonadas vendidas: &quot;" newline="True"/>
+            <input variable="cantidadUnidades"/>
+            <comment text="Process"/>
+            <assign variable="utilidadUnitaria" expression="PRECIOUNITARIO -COSTOUNITARIO"/>
+            <assign variable="utilidadTotal" expression="utilidadUnitaria * cantidadUnidades"/>
+            <assign variable="utilidadPaco" expression="utilidadTotal * 0.3"/>
+            <assign variable="utilidadLuis" expression="utilidadTotal * 0.3"/>
+            <assign variable="utilidadHugo" expression="utilidadTotal * 0.4"/>
+            <comment text="output"/>
+            <output expression="&quot;Paco: &quot; &amp; utilidadPaco" newline="True"/>
+            <output expression="&quot;Luis: &quot; &amp; utilidadLuis" newline="True"/>
+            <output expression="&quot;Hugo: &quot; &amp; utilidadHugo" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
