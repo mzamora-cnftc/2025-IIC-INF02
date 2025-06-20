@@ -9,12 +9,14 @@ public class Ejemplo03 {
 
 
         salida = salida + String.format("%s, %s, %s\n", "Cantidad", "Costo", "Total");
-        for (int i = 0; i < 1000; i++) {
+        for (int i = 0; i < 10; i++) {
             cantidad1 = Utils.generarNumerosEntre(500, 600);
             cantidad2 = Utils.generarNumerosEntre(5, 10)*5000;
             cantidad3 = cantidad1 * cantidad2;
             salida = salida + String.format("%d, %d, %d\n", cantidad1, cantidad2, cantidad3);
         }
+
+        System.out.println(salida);
 
         Utils.escribirArchivo("salida.csv", salida);
     }    
