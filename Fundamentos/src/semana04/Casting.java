@@ -4,7 +4,7 @@ import utilitarios.Utils;
 
 public class Casting {
     public static void main(String[] args) {
-        int x = 1, y = 3, z = 100, r = 0, conPerdida;
+        int x = 1, y = 3, r = 0, conPerdida;
         double r2;
         Utils.limpiarConsola();
         System.out.println("Enteros");
