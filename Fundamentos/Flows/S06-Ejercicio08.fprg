@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="mauri"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-06-24 07:20:44 "/>
+        <attribute name="created" value="bWF1cmk7QkxVRVBDOzIwMjUtMDYtMjQ7IjA2OjUwOjEwICI7MjE3Mw=="/>
+        <attribute name="edited" value="bWF1cmk7QkxVRVBDOzIwMjUtMDYtMjQ7IjA3OjIwOjQ0ICI7MTsyMjg2"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="hormigas, meses, i" type="Integer" array="False" size=""/>
+            <output expression="&quot;Digite la cantidad de meses: &quot;" newline="True"/>
+            <input variable="meses"/>
+            <output expression="&quot;Digite la poblaci&#243;n inicial: &quot;" newline="True"/>
+            <input variable="hormigas"/>
+            <for variable="i" start="1" end="meses" direction="inc" step="1">
+                <comment text="Incremento de la poblaci&#243;n"/>
+                <if expression="hormigas &gt; 28000">
+                    <then>
+                        <assign variable="hormigas" expression="hormigas *1.31"/>
+                    </then>
+                    <else>
+                        <assign variable="hormigas" expression="hormigas *1.4"/>
+                    </else>
+                </if>
+                <comment text="Decremento de la poblaci&#243;n"/>
+                <if expression="hormigas &gt;= 7000">
+                    <then>
+                        <assign variable="hormigas" expression="hormigas - 7000"/>
+                        <output expression="&quot;La poblaci&#243;n de hormigas es: &quot; &amp; hormigas" newline="True"/>
+                    </then>
+                    <else>
+                        <assign variable="hormigas" expression="0"/>
+                        <output expression="&quot;Se han extinguido las hormigas&quot;" newline="True"/>
+                    </else>
+                </if>
+            </for>
+        </body>
+    </function>
+</flowgorithm>
