@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="mauri"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-07-10 08:13:12 "/>
+        <attribute name="created" value="bWF1cmk7QkxVRVBDOzIwMjUtMDctMTA7IjA4OjAxOjUzICI7MjE3NA=="/>
+        <attribute name="edited" value="bWF1cmk7QkxVRVBDOzIwMjUtMDctMTA7IjA4OjEzOjEyICI7MTsyMjgw"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <output expression="obtenerMayor(500, 50, 100)" newline="True"/>
+        </body>
+    </function>
+    <function name="obtenerMayor" type="Integer" variable="mayor">
+        <parameters>
+            <parameter name="a" type="Integer" array="False"/>
+            <parameter name="b" type="Integer" array="False"/>
+            <parameter name="c" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="mayor" type="Integer" array="False" size=""/>
+            <assign variable="mayor" expression="obtenerMayorDos(a, b)"/>
+            <assign variable="mayor" expression="obtenerMayorDos(mayor, c)"/>
+        </body>
+    </function>
+    <function name="obtenerMayorDos" type="Integer" variable="mayor">
+        <parameters>
+            <parameter name="a" type="Integer" array="False"/>
+            <parameter name="b" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="mayor" type="Integer" array="False" size=""/>
+            <if expression="a &gt; b">
+                <then>
+                    <assign variable="mayor" expression="a"/>
+                </then>
+                <else>
+                    <assign variable="mayor" expression="b"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

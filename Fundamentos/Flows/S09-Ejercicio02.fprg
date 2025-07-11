@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="mauri"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-07-10 07:29:41 "/>
+        <attribute name="created" value="bWF1cmk7QkxVRVBDOzIwMjUtMDctMTA7IjA2OjQzOjQwICI7MjE3NA=="/>
+        <attribute name="edited" value="bWF1cmk7QkxVRVBDOzIwMjUtMDctMTA7IjA3OjI5OjQxICI7MTsyMjg4"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="metros" type="Real" array="False" size=""/>
+            <output expression="&quot;Digite los metros: &quot;" newline="True"/>
+            <input variable="metros"/>
+            <output expression="&quot;Pulgadas: &quot; &amp; convertirMetrosEnPulgadas(metros)" newline="True"/>
+            <output expression="&quot;Pies: &quot; &amp; convertirMetrosEnPies(metros)" newline="True"/>
+        </body>
+    </function>
+    <function name="convertirMetrosEnPies" type="Real" variable="pies">
+        <parameters>
+            <parameter name="metros" type="Real" array="False"/>
+        </parameters>
+        <body>
+            <declare name="pies" type="Real" array="False" size=""/>
+            <assign variable="pies" expression="convertirMetrosEnPulgadas(metros) / 12"/>
+        </body>
+    </function>
+    <function name="convertirMetrosEnPulgadas" type="Real" variable="pulgadas">
+        <parameters>
+            <parameter name="metros" type="Real" array="False"/>
+        </parameters>
+        <body>
+            <declare name="pulgadas" type="Real" array="False" size=""/>
+            <assign variable="pulgadas" expression="metros * 100 / 2.54"/>
+        </body>
+    </function>
+</flowgorithm>
