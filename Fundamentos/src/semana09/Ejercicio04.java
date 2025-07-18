@@ -4,7 +4,12 @@ import utilitarios.Utils;
 
 public class Ejercicio04 {
 
-
+    /**
+     * Esta función obtiene el mayor de dos números
+     * @param a Este es el primer
+     * @param b Este es el segundo
+     * @return Devuelve el mayor de los dos números entregados
+     */
     public static int obtenerMayorDos(int a, int b) {
         int salida;
         if (a > b) {
