@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="mauri"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-07-24 08:13:41 "/>
+        <attribute name="created" value="bWF1cmk7QkxVRVBDOzIwMjUtMDctMjQ7IjA3OjE5OjQ0ICI7MjE4Nw=="/>
+        <attribute name="edited" value="bWF1cmk7QkxVRVBDOzIwMjUtMDctMjQ7IjA4OjEzOjQxICI7MTsyMjg3"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n, nn, i, total" type="Integer" array="False" size=""/>
+            <declare name="promedio" type="Real" array="False" size=""/>
+            <assign variable="total" expression="0"/>
+            <output expression="&quot;Digite la cantidad de datos a procesar: &quot;" newline="True"/>
+            <input variable="n"/>
+            <declare name="datos" type="Integer" array="True" size="n"/>
+            <assign variable="nn" expression="Size(datos)"/>
+            <for variable="i" start="0" end="n-1" direction="inc" step="1">
+                <output expression="&quot;Valor para la posici&#243;n &quot; &amp; (i+1) &amp; &quot;: &quot;" newline="True"/>
+                <input variable="datos[i]"/>
+            </for>
+            <for variable="i" start="0" end="n-1" direction="inc" step="1">
+                <assign variable="total" expression="total + datos[i]"/>
+            </for>
+            <assign variable="promedio" expression="total / n"/>
+            <output expression="&quot;Total = &quot; &amp; total" newline="True"/>
+            <output expression="&quot;Promedio = &quot; &amp; promedio" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

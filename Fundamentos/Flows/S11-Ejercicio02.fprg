@@ -1,0 +1,90 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="mauri"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-07-29 07:02:22 "/>
+        <attribute name="created" value="bWF1cmk7QkxVRVBDOzIwMjUtMDctMjk7IjA2OjI3OjE2ICI7MjE4OQ=="/>
+        <attribute name="edited" value="bWF1cmk7QkxVRVBDOzIwMjUtMDctMjk7IjA3OjAyOjIyICI7NDsyMjkx"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n" type="Integer" array="False" size=""/>
+            <output expression="&quot;Digite el tama&#241;o del arreglo: &quot;" newline="True"/>
+            <input variable="n"/>
+            <declare name="notas" type="Integer" array="True" size="n"/>
+            <call expression="leerNotas(notas)"/>
+            <call expression="imprimirNotas(notas)"/>
+            <output expression="&quot;Mayor: &quot; &amp; encontrarNotaMayor(notas)" newline="True"/>
+            <output expression="&quot;Menor: &quot; &amp; encontrarNotaMenor(notas)" newline="True"/>
+        </body>
+    </function>
+    <function name="encontrarNotaMayor" type="Integer" variable="valor">
+        <parameters>
+            <parameter name="arreglo" type="Integer" array="True"/>
+        </parameters>
+        <body>
+            <declare name="valor, i, tamanno" type="Integer" array="False" size=""/>
+            <assign variable="tamanno" expression="Size(arreglo)"/>
+            <comment text="para poder comparar los valores y no haya problema"/>
+            <assign variable="valor" expression="arreglo[0]"/>
+            <for variable="i" start="0" end="tamanno-1" direction="inc" step="1">
+                <if expression="arreglo[i] &gt; valor">
+                    <then>
+                        <assign variable="valor" expression="arreglo[i]"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+        </body>
+    </function>
+    <function name="encontrarNotaMenor" type="Integer" variable="valor">
+        <parameters>
+            <parameter name="arreglo" type="Integer" array="True"/>
+        </parameters>
+        <body>
+            <declare name="valor, i, tamanno" type="Integer" array="False" size=""/>
+            <assign variable="tamanno" expression="Size(arreglo)"/>
+            <comment text="para poder comparar los valores y no haya problema"/>
+            <assign variable="valor" expression="arreglo[0]"/>
+            <for variable="i" start="0" end="tamanno-1" direction="inc" step="1">
+                <if expression="arreglo[i] &lt; valor">
+                    <then>
+                        <assign variable="valor" expression="arreglo[i]"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+        </body>
+    </function>
+    <function name="imprimirNotas" type="None" variable="">
+        <parameters>
+            <parameter name="arreglo" type="Integer" array="True"/>
+        </parameters>
+        <body>
+            <declare name="tamanno, i" type="Integer" array="False" size=""/>
+            <assign variable="tamanno" expression="Size(arreglo)"/>
+            <comment text="en Java no llega hasta el &#250;ltima"/>
+            <for variable="i" start="0" end="tamanno-1" direction="inc" step="1">
+                <output expression="&quot;Nota #&quot; &amp; (i+1) &amp; &quot;: &quot; &amp; arreglo[i]" newline="True"/>
+            </for>
+        </body>
+    </function>
+    <function name="leerNotas" type="None" variable="">
+        <parameters>
+            <parameter name="arreglo" type="Integer" array="True"/>
+        </parameters>
+        <body>
+            <declare name="tamanno, i, valor" type="Integer" array="False" size=""/>
+            <assign variable="tamanno" expression="Size(arreglo)"/>
+            <comment text="en Java no llega hasta el &#250;ltima"/>
+            <for variable="i" start="0" end="tamanno-1" direction="inc" step="1">
+                <output expression="&quot;Digite la nota #&quot; &amp; (i+1)" newline="True"/>
+                <input variable="valor"/>
+                <assign variable="arreglo[i]" expression="valor"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>
