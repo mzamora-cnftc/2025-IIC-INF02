@@ -2,7 +2,7 @@ package semana11;
 
 import utilitarios.Utils;
 
-public class ejemplo01 {
+public class Ejemplo01 {
     public static void main(String[] args) {
         int n, total = 0;
         double promedio;
