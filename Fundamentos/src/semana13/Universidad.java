@@ -30,7 +30,6 @@ public class Universidad {
         }
     }
 
-
     public static double identificarValorMayorArregloDobles(double[] arreglo) {
         double mayor = Double.MIN_VALUE;
         for (double valorIndividual : arreglo) {
@@ -75,7 +74,7 @@ public class Universidad {
         }
     }
 
-    public static double obtenerValorMayor(double[][] matriz) { 
+    public static double obtenerValorMayor(double[][] matriz) {
         double mayor = Double.MIN_VALUE;
         for (int i = 0; i < matriz.length; i++) {
             for (int j = 0; j < matriz[i].length; j++) {
@@ -95,16 +94,6 @@ public class Universidad {
         String opcion;
         int iOpcion;
 
-        // nEstudiantes = Utils.leerEntero("Digite la cantidad de estudiantes: ");
-        // nPruebas = Utils.leerEntero("Digite la cantidad de pruebas: ");
-
-        // estudiantes = new String[nEstudiantes];
-        estudiantes = new String[] { "Paula", "Kath", "Trayce", "Linda" };
-        // pruebas = new String[nPruebas];
-        pruebas = new String[] { "Español", "Ciencias" };
-
-        // notas = new double[estudiantes.length][pruebas.length];
-        notas = new double[][] { { 90, 100 }, { 95, 95 }, { 97.5, 92.5 }, { 96, 94 } };
         // cargarNumerosAleatorios(notas);
 
         // llenarArregloString(estudiantes, "Digite el nombre de los estudiantes");
@@ -122,13 +111,21 @@ public class Universidad {
             System.out.println(opcion);
             switch (opcion) {
                 case "Inicializar":
-
+                    nEstudiantes = Utils.leerEntero("Digite la cantidad de estudiantes: ");
+                    nPruebas = Utils.leerEntero("Digite la cantidad de pruebas: ");
+                    estudiantes = new String[nEstudiantes];
+                    pruebas = new String[nPruebas];
+                    notas = new double[estudiantes.length][pruebas.length];
                     break;
                 case "Asignar estudiantes":
-
+                    for (int i = 0; i < estudiantes.length; i++) {
+                        estudiantes[i] = Utils.leerString("Estudiante "+ (i+1)+": ");
+                    }
                     break;
                 case "Asignar pruebas":
-
+                    for (int i = 0; i < pruebas.length; i++) {
+                        pruebas[i] = Utils.leerString("Prueba "+ (i+1)+": ");
+                    }
                     break;
                 case "Asignar notas":
 
@@ -141,14 +138,14 @@ public class Universidad {
                     double[] notasMayores = identificarValoresMayoresPorColumna(notas);
                     imprimir(estudiantes, pruebas, notas);
                     for (int i = 0; i < notasMayores.length; i++) {
-                        System.out.printf("%-15s %15.2f\n",pruebas[i], notasMayores[i]);
+                        System.out.printf("%-15s %15.2f\n", pruebas[i], notasMayores[i]);
                     }
                     break;
                 case "Obtener nota mayor por estudiante":
                     double[] notasMayoresFila = identificarValoresMayoresPorFila(notas);
                     imprimir(estudiantes, pruebas, notas);
                     for (int i = 0; i < notasMayoresFila.length; i++) {
-                        System.out.printf("%-15s %15.2f\n",estudiantes[i], notasMayoresFila[i]);
+                        System.out.printf("%-15s %15.2f\n", estudiantes[i], notasMayoresFila[i]);
                     }
                     break;
 
