@@ -119,12 +119,12 @@ public class Universidad {
                     break;
                 case "Asignar estudiantes":
                     for (int i = 0; i < estudiantes.length; i++) {
-                        estudiantes[i] = Utils.leerString("Estudiante "+ (i+1)+": ");
+                        estudiantes[i] = Utils.leerString("Estudiante " + (i + 1) + ": ");
                     }
                     break;
                 case "Asignar pruebas":
                     for (int i = 0; i < pruebas.length; i++) {
-                        pruebas[i] = Utils.leerString("Prueba "+ (i+1)+": ");
+                        pruebas[i] = Utils.leerString("Prueba " + (i + 1) + ": ");
                     }
                     break;
                 case "Asignar notas":
